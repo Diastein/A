@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações de Saúde - Gripe Influenza e COVID-19</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(240, 244, 248, 0.9), rgba(240, 244, 248, 0.9)), url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .card {
+      background-color: #ffffffcc;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+      padding: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .card:hover {
+      background-color: #e6f0ffcc;
+    }
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
+    .info-content {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ccc;
+      color: #444;
+    }
+    footer {
+      background-color: #6c757d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 80px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card img {
+        width: 40px;
+        height: 40px;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      footer {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Saúde em Foco</h1>
+    <p>Informações sobre Gripe Influenza e COVID-19</p>
+  </header>
+
+  <section>
+    <div class="card" onclick="toggleInfo('influenza')">
+      <img src="https://img.icons8.com/ios-filled/50/007BFF/virus.png" alt="Ícone Influenza">
+      <div>
+        <strong>Gripe Influenza</strong>
+        <div class="info-content" id="influenza">
+          <p>A gripe influenza é uma infecção viral aguda do sistema respiratório, altamente transmissível. Existem três tipos principais do vírus: A, B e C, sendo o tipo A o mais associado a pandemias. Os sintomas típicos incluem febre alta, dores musculares, dor de garganta, tosse seca e fadiga.</p>
+          <p>A transmissão ocorre principalmente por gotículas de saliva expelidas ao falar, tossir ou espirrar. O período de incubação varia de 1 a 4 dias. A vacina contra a gripe é atualizada anualmente para proteger contra as cepas circulantes mais comuns. É altamente recomendada para grupos de risco como idosos, gestantes, crianças pequenas e pessoas com doenças crônicas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('covid')">
+      <img src="https://img.icons8.com/ios-filled/50/007BFF/coronavirus.png" alt="Ícone COVID-19">
+      <div>
+        <strong>COVID-19</strong>
+        <div class="info-content" id="covid">
+          <p>A COVID-19 é uma doença causada pelo coronavírus SARS-CoV-2, identificada pela primeira vez em 2019. Seus sintomas mais comuns incluem febre, tosse seca, cansaço, perda de olfato e paladar. Casos graves podem evoluir para pneumonia e insuficiência respiratória, especialmente em pessoas com comorbidades ou idade avançada.</p>
+          <p>A doença se espalha principalmente por meio de gotículas respiratórias e contato com superfícies contaminadas. A prevenção envolve vacinação, uso de máscaras, distanciamento social e higiene frequente das mãos. As vacinas atualmente utilizadas incluem versões bivalentes que protegem contra variantes recentes como Ômicron.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('calendario')">
+      <img src="https://img.icons8.com/ios-filled/50/007BFF/calendar.png" alt="Ícone Calendário">
+      <div>
+        <strong>Calendário de Vacinação 2025</strong>
+        <div class="info-content" id="calendario">
+          <p><strong>🦠 Gripe Influenza</strong><br>
+          Início da campanha: 7 de abril de 2025<br>
+          Vacina trivalente contra H1N1, H3N2 e B.<br>
+          Faixas etárias: crianças de 6 meses a menores de 6 anos, gestantes e idosos 60+.</p>
+
+          <p><strong>🧬 COVID-19</strong><br>
+          Início da vacinação infantil: 1º de janeiro de 2024<br>
+          Vacina Ômicron XBB.1.5 para crianças até 5 anos, Bivalente Comirnaty (Pfizer) para maiores de 12 anos.<br>
+          Grupos prioritários: indígenas, gestantes, trabalhadores da saúde, comorbidades, entre outros.</p>
+
+          <p>Para mais informações, acesse o <a href="https://www.gov.br/saude/pt-br/vacinacao/calendario" target="_blank">Calendário Nacional de Vacinação</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Saúde em Foco - Informações baseadas em fontes oficiais de saúde.</p>
+  </footer>
+
+  <script>
+    function toggleInfo(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
