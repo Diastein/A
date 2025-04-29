@@ -12,6 +12,8 @@ body {
   header {
     text-align: center;
     margin-bottom: 10px; /* Espaço abaixo da imagem */
+    border-bottom: 2px solid #007BFF; /* Linha azul abaixo do header */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   header img {
@@ -19,6 +21,10 @@ body {
     height: auto;
   }
   
+.rodape{
+  font-size: 1.5rem;
+}
+
   p {
     text-align: center;
     font-size: 1.2em;
@@ -57,6 +63,7 @@ body {
   
   .card:hover {
     background-color: #e6f0ffcc;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
   
   .card img {
